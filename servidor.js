@@ -258,12 +258,15 @@ app.get('/api/tickets/facturar/:id/',(request, response)=>{
         .catch( error => res.status(400).send(error));
         })
         
+//usar en heroku
+.listen(process.env.PORT || 3000)
 
-//.listen(process.env.PORT || 3000)
-var PORT = process.env.port || 8801;
-app.listen(PORT,()=>{
-    console.log(`Servidor Corriendo en el puerto ${PORT}`)
-})
+
+//usar en local host
+// var PORT = process.env.port || 8801;
+// app.listen(PORT,()=>{
+//     console.log(`Servidor Corriendo en el puerto ${PORT}`)
+// })
 
 
 
